@@ -1,0 +1,155 @@
+<div id="pdfContent">
+  <div class="container__main">
+    <app-header></app-header>
+    <app-apresentacao></app-apresentacao>
+    <app-sobre-mim></app-sobre-mim>
+    <a name="skills"></a>
+    <div class="container__skills">
+      <h1 class="skills__title">Skills</h1>
+      <div class="skills__cards">
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-html5'"
+          [language]="'HTML5'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-css3'"
+          [language]="'CSS3'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-js'"
+          [language]="'JavaScript'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'bi bi-filetype-tsx'"
+          [language]="'Typescript'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-bootstrap'"
+          [language]="'Bootstrap'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-angular'"
+          [language]="'Angular'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-brands fa-react'"
+          [language]="'React'"
+        ></app-card-skills>
+      </div>
+      <h1 class="skills__title">Hobbies</h1>
+      <div class="skills__cards">
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-solid fa-person-snowboarding'"
+          [language]="'Kitesurf'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-solid fa-dumbbell'"
+          [language]="'Crossfit'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-solid fa-film'"
+          [language]="'Assistir filme'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-solid fa-plane'"
+          [language]="'Viajar'"
+        ></app-card-skills>
+        <app-card-skills
+          class="skill__cards-card"
+          [iconName]="'fa-solid fa-umbrella-beach'"
+          [language]="'Praia'"
+        ></app-card-skills>
+      </div>
+    </div>
+
+    <a name="formacao"></a>
+    <div class="container__formacao">
+      <h1 class="formacao__title">Formação Acadêmica</h1>
+      <div class="container__formacao-cards">
+        <div class="formacao__cards">
+          <app-formacao
+            [AnoEInstituicao]="'UFPE - 2007'"
+            [curso]="'Engenharia de Produção'"
+            [urlImg]="'../../assets/img/ufpe-logo.jpeg'"
+          ></app-formacao>
+
+          <app-formacao
+            [AnoEInstituicao]="'Insper - 2010'"
+            [curso]="'Certificate in Business Administration'"
+            [urlImg]="'../../assets/img/insper-logo.jpeg'"
+          ></app-formacao>
+          <app-formacao
+            [AnoEInstituicao]="'OneBitCode - 2023'"
+            [curso]="'FullStack JS developer'"
+            [urlImg]="'../../assets/img/obc-logo.jpeg'"
+          ></app-formacao>
+          <app-formacao
+            [AnoEInstituicao]="'DIO - 2023'"
+            [curso]="'Angular'"
+            [urlImg]="'../../assets/img/dio-logo.jpeg'"
+          ></app-formacao>
+          <app-formacao
+            [AnoEInstituicao]="'Alura - 2023'"
+            [curso]="'Formação Frontend'"
+            [urlImg]="'../../assets/img/logo-alura.svg'"
+          ></app-formacao>
+        </div>
+      </div>
+    </div>
+    <a name="experiencia"></a>
+    <div class="container__experiencia">
+      <h1 class="experiencia__title">Experiência Profissional</h1>
+      <app-experiencia
+        class="experiencia__card"
+        [projetoName]="'Lista de Compras'"
+        [projetoEmpresa]="'Alura - 7 days of coding'"
+        [urlRepo]="'https://github.com/balicoelho/angular--lista-compras'"
+        [urlLink]="'https://balicoelho.github.io/angular--lista-compras/'"
+        [urlImgExperience]="'../../assets/img/listaCompras.jpg'"
+        [classeAtiva]="false"
+      ></app-experiencia>
+      <app-experiencia
+        class="experiencia__card"
+        [projetoName]="'Decodificador de Texto'"
+        [projetoEmpresa]="'Challenge Alura Codificador  '"
+        [urlRepo]="'https://github.com/balicoelho/Decodificador'"
+        [urlLink]="'https://balicoelho.github.io/Decodificador/'"
+        [urlImgExperience]="'../../assets/img/decodificador.svg'"
+        [classeAtiva]="true"
+      ></app-experiencia>
+      <app-experiencia
+        class="experiencia__card"
+        [projetoName]="'Site Alurinha'"
+        [projetoEmpresa]="'Alura ONE'"
+        [urlRepo]="'https://github.com/balicoelho/Flexbox---Site-Alurinha'"
+        [urlLink]="'https://balicoelho.github.io/Flexbox---Site-Alurinha/'"
+        [urlImgExperience]="'../../assets/img/siteAlurinha.jpg'"
+        [classeAtiva]="false"
+      ></app-experiencia>
+    </div>
+    <div class="container__contato">
+      <div class="contato__img"></div>
+      <div class="contato__form">
+        <h1 class="contato__title">Contato</h1>
+        <p class="contato__text">
+          Quer entrar em contato comigo? <br />
+          Preencha o formulário abaixo e entrarei em contato o mais rápido
+          possível.
+        </p>
+        <app-contact></app-contact>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

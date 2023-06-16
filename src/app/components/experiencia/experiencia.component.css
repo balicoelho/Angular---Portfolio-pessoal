@@ -1,0 +1,74 @@
+.container__experiencia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 64px;
+  background-color: var(--bg-main);
+}
+.experiencia__projeto-img {
+  background: no-repeat center / cover;
+  width: 296px;
+  height: 144px;
+  margin-bottom: 1rem;
+}
+.experiencia__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.experiencia__subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.btn__experiencia {
+  display: flex;
+  flex-direction: flex-start;
+  gap: 16px;
+}
+
+.btn__experiencia > button {
+  font-size: 14px;
+  font-weight: 600;
+  width: 108px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn__experiencia--repositorio {
+  color: var(--bg-blue);
+  border: 1px solid var(--bg-blue);
+}
+.btn__experiencia--demo {
+  background-color: var(--bg-blue);
+  color: white;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .experiencia__projeto-img {
+    width: 704px;
+    height: 320px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container__experiencia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .experiencia__projeto-img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 26px;
+    margin-left: 26px;
+    width: 752px;
+    height: 427px;
+  }
+
+  .ordem-1 {
+    /* Estilos para a classe ordem-1 */
+    order: 1;
+  }
+}

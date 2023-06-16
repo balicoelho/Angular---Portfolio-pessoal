@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  width: calc(156px - 2rem);
+  height: calc(118px - 1rem);
+}
+
+.card__skills__name {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+
+.card__skills__icon {
+  color: var(--bg-blue);
+  font-size: 32px;
+}
+
+@media screen and (min-width: 691px) {
+  .container {
+    width: calc(224px - 2rem);
+    height: calc(118px - 1rem);
+    flex-grow: 1;
+    align-self: stretch;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: calc(176px - 2rem);
+    height: calc(174px - 1rem);
+    flex-grow: 0;
+  }
+}

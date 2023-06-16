@@ -1,0 +1,19 @@
+<div class="container__experiencia">
+  <div
+    class="experiencia__projeto-img"
+    [style.background-image]="'url(' + urlImgExperience + ')'"
+    [class.ordem-1]="classeAtiva"
+  ></div>
+  <div class="experiencia__projeto-infos">
+    <h1 class="experiencia__title">{{ projetoName }}</h1>
+    <p class="experiencia__subtitle">{{ projetoEmpresa }}</p>
+    <div class="btn__experiencia">
+      <button class="btn__experiencia--repositorio">
+        <a href="{{ urlRepo }}" target="_blank">Repositório</a>
+      </button>
+      <button class="btn__experiencia--demo">
+        <a href="{{ urlLink }}" target="_blank">Ver demo</a>
+      </button>
+    </div>
+  </div>
+</div>

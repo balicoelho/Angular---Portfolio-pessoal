@@ -1,0 +1,130 @@
+.container__formacao,
+.container__contato {
+  background-color: var(--bg-light-blue);
+  padding: 2rem;
+}
+.container__experiencia {
+  background-color: var(--bg-main);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formacao__title,
+.experiencia__title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contato__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contato__text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.skill__cards-card {
+  background-color: white;
+}
+
+@media screen and (min-width: 1440px) {
+  .container__formacao,
+  .container__contato {
+    padding: 82px 152px;
+  }
+
+  .container__formacao {
+    flex-direction: row;
+  }
+  .formacao__title,
+  .experiencia__title,
+  .contato__title {
+    font-size: 32px;
+  }
+
+  .container__contato {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .contato__img {
+    background: url("../../../assets/img/img-contato.svg") no-repeat center
+      center / cover;
+    width: 464px;
+    height: 593px;
+    margin-right: 0.5rem;
+  }
+}
+
+.container__skills {
+  background-color: var(--bg-main);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.skills__title {
+  font-weight: 700;
+  font-size: 22px;
+  padding: 2rem 0;
+}
+
+.skills__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.skill__cards-card {
+  background-color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 9.5rem 5rem 9.5rem;
+  }
+
+  .skills__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+
+.formacao__cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .formacao__cards {
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .formacao__cards {
+    flex-wrap: wrap;
+  }
+
+  .skills__cards {
+    margin-bottom: 2rem;
+  }
+}

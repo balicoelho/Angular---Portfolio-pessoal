@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-main);
+  color: var(--black);
+  justify-content: space-around;
+  padding: 34.5px 0;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+}
+
+.header__brand__icon {
+  background: url("../../../assets/img/sparkles.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.header__brand__name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.header__menu {
+  width: 60%;
+}
+
+.header__menu-itens {
+  display: flex;
+  font-weight: 500;
+  justify-content: space-around;
+}
+
+.header__menu-item--email {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 18.5px 16px;
+  }
+
+  .header__brand {
+    width: 50%;
+  }
+
+  .header__menu-itens {
+    justify-content: flex-end;
+  }
+
+  .header__menu-item--email {
+    font-size: 0.875rem;
+    font-weight: 400;
+    order: -1;
+  }
+  .header__menu-item:not(.header__menu-item--email) {
+    display: none;
+  }
+}
