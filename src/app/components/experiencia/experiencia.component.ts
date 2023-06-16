@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { PdfService } from 'src/app/pdf.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -16,10 +15,4 @@ export class ExperienciaComponent {
   @Input() urlLink: string = '';
   @Input() urlImgExperience: string = '';
   @Input() classeAtiva: boolean = true;
-
-  constructor(private pdfService: PdfService) {
-    this.pdfService.nameChanged.subscribe((newName: boolean) => {
-      this.classeAtiva = newName;
-    });
-  }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { PdfService } from 'src/app/pdf.service';
 
 @Component({
   selector: 'app-home',
