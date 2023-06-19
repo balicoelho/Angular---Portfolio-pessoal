@@ -2,14 +2,30 @@
 <div class="field">
   <label class="label">Nome</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Nome completo" />
+    <input
+      class="input"
+      type="text"
+      placeholder="Nome completo"
+      name="name"
+      ngModel
+      maxlength="50"
+      ngModel
+      minlength="2"
+    />
   </div>
 </div>
 
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="hello@" />
+    <input
+      class="input"
+      type="email"
+      placeholder="hello@"
+      name="email"
+      ngModel
+      email
+    />
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -19,14 +35,31 @@
 <div class="field">
   <label class="label">Assunto</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Assunto" />
+    <input
+      class="input"
+      type="text"
+      placeholder="Assunto"
+      name="assunto"
+      ngModel
+      maxlength="50"
+      ngModel
+      minlength="2"
+    />
   </div>
 </div>
 
 <div class="field">
   <label class="label">Mensagem</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Escreva sua mensagem"></textarea>
+    <textarea
+      class="textarea"
+      placeholder="Escreva sua mensagem"
+      name="mensagem"
+      ngModel
+      maxlength="300"
+      ngModel
+      minlength="2"
+    ></textarea>
   </div>
 </div>
 
