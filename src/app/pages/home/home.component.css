@@ -34,6 +34,58 @@
   background-color: white;
 }
 
+.container__skills {
+  background-color: var(--bg-main);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.skills__title {
+  font-weight: 700;
+  font-size: 22px;
+  padding: 2rem 0;
+}
+
+.skills__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.skill__cards-card {
+  background-color: white;
+}
+
+.formacao__cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 9.5rem 5rem 9.5rem;
+  }
+
+  .skills__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  .formacao__cards {
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .container__formacao,
   .container__contato {
@@ -62,64 +114,6 @@
     height: 593px;
     margin-right: 0.5rem;
   }
-}
-
-.container__skills {
-  background-color: var(--bg-main);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0 1rem 1rem 1rem;
-}
-
-.skills__title {
-  font-weight: 700;
-  font-size: 22px;
-  padding: 2rem 0;
-}
-
-.skills__cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1rem;
-}
-
-.skill__cards-card {
-  background-color: white;
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    padding: 0 9.5rem 5rem 9.5rem;
-  }
-
-  .skills__title {
-    font-weight: 700;
-    font-size: 32px;
-  }
-}
-
-.formacao__cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-@media screen and (min-width: 1024px) {
-  .formacao__cards {
-    gap: 8px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-
-@media screen and (min-width: 1440px) {
   .formacao__cards {
     flex-wrap: wrap;
   }

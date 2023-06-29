@@ -1,70 +1,120 @@
 <a name="contato"></a>
-<div class="field">
-  <label class="label">Nome</label>
-  <div class="control">
-    <input
-      class="input"
-      type="text"
-      placeholder="Nome completo"
-      name="name"
-      ngModel
-      maxlength="50"
-      ngModel
-      minlength="2"
-    />
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="field">
+    <label class="label">Nome completo</label>
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="Nome completo"
+        name="name"
+        maxlength="50"
+        minlength="2"
+        required
+        ngModel
+        #name="ngModel"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="!name.valid && name.touched"
+    >
+      <i class="fa-solid fa-triangle-exclamation" style="color: #e51010"></i>
+      Nome é obrigatório
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
-    <input
-      class="input"
-      type="email"
-      placeholder="hello@"
-      name="email"
-      ngModel
-      email
-    />
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input
+        class="input"
+        type="email"
+        placeholder="hello@"
+        name="email"
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        required
+        ngModel
+        #email="ngModel"
+      />
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="!email.valid && email.touched"
+    >
+      <i class="fa-solid fa-triangle-exclamation" style="color: #e51010"></i>
+      E-mail é obrigatório
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <label class="label">Assunto</label>
-  <div class="control">
-    <input
-      class="input"
-      type="text"
-      placeholder="Assunto"
-      name="assunto"
-      ngModel
-      maxlength="50"
-      ngModel
-      minlength="2"
-    />
+  <div class="field">
+    <label class="label">Assunto</label>
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="Assunto"
+        name="assunto"
+        maxlength="50"
+        minlength="1"
+        required
+        ngModel
+        #assunto="ngModel"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="!assunto.valid && assunto.touched"
+    >
+      <i class="fa-solid fa-triangle-exclamation" style="color: #e51010"></i>
+      Assunto é obrigatório
+    </div>
   </div>
-</div>
 
-<div class="field">
-  <label class="label">Mensagem</label>
-  <div class="control">
-    <textarea
-      class="textarea"
-      placeholder="Escreva sua mensagem"
-      name="mensagem"
-      ngModel
-      maxlength="300"
-      ngModel
-      minlength="2"
-    ></textarea>
+  <div class="field">
+    <label class="label">Mensagem</label>
+    <div class="control">
+      <textarea
+        class="textarea"
+        placeholder="Escreva sua mensagem"
+        name="mensagem"
+        minlength="1"
+        ngModel
+        required
+        #mensagem="ngModel"
+        (ngModelChange)="checkMaxLength(mensagem)"
+      ></textarea>
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="!mensagem.valid && mensagem.touched"
+    >
+      <i class="fa-solid fa-triangle-exclamation" style="color: #e51010"></i>
+      Mensagem é obrigatória
+    </div>
+    <div class="alert alert-warning" role="alert" *ngIf="tamMax">
+      <i class="fa-solid fa-circle-exclamation" style="color: #e6df19"></i>
+      A mensagem atingiu o numero de caracteres máximo de 300.
+    </div>
   </div>
-</div>
 
-<div class="field is-grouped">
-  <div class="control button__form">
-    <button class="button">Enviar mensagem</button>
+  <div class="field is-grouped">
+    <div class="control button__form">
+      <button
+        [disabled]="!f.valid"
+        type="submit"
+        class="btn btn-primary"
+        disabled
+      >
+        Enviar mensagem
+      </button>
+    </div>
   </div>
-</div>
+</form>
